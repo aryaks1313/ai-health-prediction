@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f6f7;
+    color: #203c42;
+}
+
+header {
+    background: #103f46;
+    color: white;
+    padding: 28px 5%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #c2e0dd;
+}
+
+main {
+    width: 92%;
+    max-width: 1500px;
+    margin: 24px auto;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat, .panel {
+    background: white;
+    border: 1px solid #dbe7e8;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.stat p {
+    margin: 0;
+    color: #61777b;
+}
+
+.stat h2 {
+    color: #116d62;
+    margin-bottom: 0;
+}
+
+.panel {
+    margin-bottom: 24px;
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #cbd9dc;
+    border-radius: 7px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #79b9b0;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background: #116d62;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 18px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+.secondary {
+    background: #61777b;
+}
+
+.delete {
+    background: #a83b3b;
+}
+
+.edit {
+    background: #275e87;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 13px;
+    border-bottom: 1px solid #dbe7e8;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #e8f2f1;
+}
+
+td:nth-child(7) {
+    min-width: 260px;
+    line-height: 1.6;
+}
+
+td:last-child button {
+    margin: 3px;
+}
+
+.success, .error {
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+.success {
+    background: #e0f2e8;
+    color: #176247;
+}
+
+.error {
+    background: #fde6e6;
+    color: #a32323;
+}
+
+.disclaimer {
+    font-size: 13px;
+    color: #61777b;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+
+    .stats, .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+    }
+}

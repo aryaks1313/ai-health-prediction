@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HealthInsight AI</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>HealthInsight AI</h1>
+    <p>Patient Management & Health Assessment</p>
+</header>
+
+<main>
+
+    <section class="stats">
+
+        <div class="stat">
+            <p>Total Patients</p>
+            <h2 id="totalPatients">0</h2>
+        </div>
+
+        <div class="stat">
+            <p>AI Assessments</p>
+            <h2 id="totalAssessments">0</h2>
+        </div>
+
+        <div class="stat">
+            <p>System Status</p>
+            <h2 id="systemStatus">Checking</h2>
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <h2 id="formTitle">Register Patient</h2>
+
+        <form id="patientForm" novalidate>
+
+            <div class="form-grid">
+
+                <label>
+                    Full Name
+                    <input id="full_name" type="text">
+                </label>
+
+                <label>
+                    Date of Birth
+                    <input id="date_of_birth"
+                           type="text"
+                           placeholder="DD/MM/YYYY">
+                </label>
+
+                <label>
+                    Email Address
+                    <input id="email" type="email">
+                </label>
+
+                <label>
+                    Glucose (mg/dL)
+                    <input id="glucose"
+                           type="number" step="any">
+                </label>
+
+                <label>
+                    Haemoglobin (g/dL)
+                    <input id="haemoglobin"
+                           type="number" step="any">
+                </label>
+
+                <label>
+                    Cholesterol (mg/dL)
+                    <input id="cholesterol"
+                           type="number" step="any">
+                </label>
+
+            </div>
+
+            <div class="actions">
+
+                <button type="submit" id="saveButton">
+                    Predict & Save Patient
+                </button>
+
+                <button type="button"
+                        id="clearButton"
+                        class="secondary">
+                    Clear
+                </button>
+
+            </div>
+
+            <div id="message" role="status"></div>
+
+        </form>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Patient Records</h2>
+
+        <input id="search"
+               placeholder="Search by name or email">
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                        <th>Glucose</th>
+                        <th>Haemoglobin</th>
+                        <th>Cholesterol</th>
+                        <th>AI Remarks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="patientTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <p class="disclaimer">
+        Educational demonstration only.
+        AI-generated remarks are not medical diagnoses.
+        Reference units are assumed, and clinical
+        interpretation requires professional review.
+    </p>
+
+</main>
+
+<script src="/static/script.js" defer></script>
+
+</body>
+</html>
